@@ -1,0 +1,26 @@
+Use case
+
+Landing page
+simple search bar with basic filters
+
+expand to Advance search bar
+
+basic filters:
+search by:
+trackname
+artist
+album
+
+sort (Ascending + D):
+Alphanumeric 0-Z
+Date
+Rating (probably breakdown eg x>=3 etc)
+
+
+Result page:
+simple search bar on top
+
+return list of direct or very similar hit
+mouse over a element(result?) for a bit more info
+click a result to proceed for more detail
+
