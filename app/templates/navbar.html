@@ -1,0 +1,26 @@
+<html>
+	<head>
+	<title> Anisong DB </title>
+	</head>
+
+	<body>
+		<div>AnisongDB:
+			<table>
+				<tc> <a href="/index">Home</a> </tc>
+				<tc> <a href="/login">Login</a> </tc>
+			</table>
+		</div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+
+	</body>
+</html>
