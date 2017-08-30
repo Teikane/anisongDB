@@ -16,17 +16,19 @@ class User(Base):
     email = Column(String(60), nullable = False, unique= True)
     username = Column(String(25), nullable = False, unique= True)
     password = Column(String(256), nullable = False)
+    level = Column(Integer, nullable = False)
     dob = DATE()
     gender = Column(String(1))
     create_time = DATETIME()
 
  
     #----------------------------------------------------------------------
-    def __init__(self, email, username, password):
+    def __init__(self, email, username, password, level):
         """"""
         self.email = email
         self.username = username
         self.password = password
+        self.level = level
  
 # create tables
 Base.metadata.create_all(engine)
