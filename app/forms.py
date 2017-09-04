@@ -1,0 +1,18 @@
+from flask_wtf import Form
+from wtforms import StringField, PasswordField, BooleanField
+from wtforms.validators import DataRequired, Email, EqualTo
+
+class LoginForm(Form):
+	username = StringField('username', validators=[DataRequired()])
+	password = PasswordField('password', validators=[DataRequired()])
+	remember_me = BooleanField('remember_me', default=False)
+
+class SignupForm(Form):
+	username = StringField('username', validators=[DataRequired()])
+	password = PasswordField('password', validators=[DataRequired()])
+	confirm_password = PasswordField('password', validators=[DataRequired(), EqualTo('password')])
+	email = StringField('password', validators=[DataRequired(), Email()])
+
+class AddForm(Form):
+	tname = StringField('trackname', validators=[DataRequired()])
+	composer = StringField('trackname', validators=[DataRequired()])

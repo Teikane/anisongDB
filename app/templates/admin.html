@@ -1,0 +1,34 @@
+{%extends "navbar.html"%}
+
+{%block content%}
+
+	<h1> Admin</h1>
+	<select class "div-toggle" data-target=".addTarget">
+		<option value="album" data-album=".album">Album</option>
+		<option value="artist" data-show=".artist">Artist</option>
+		<option value="composer" data-show=".composer">Composer</option>
+		<option value="song" data-show=".song">Song</option>
+	</select>
+	<form action="" method="post" name="admin_add_song">
+      <!-- XSS (CSRF) include -->
+      {{ form.hidden_tag() }}
+      {{ form.csrf_token }}
+      <p>
+          Track name:<br>
+          {{ form.tname(size=80) }}<br>
+          {% for error in form.tname.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+      </p>
+      <p>
+          Composer:<br>
+          {{ form.composer(size=80) }}<br>
+          {% for error in form.composer.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+      </p>
+      <p><input type="submit" value="admin_add_song"></p>
+  </form>
+
+
+{%endblock%}
