@@ -1,6 +1,6 @@
 from passlib.hash import argon2
 
-argon2.get_backend()
+
 
 ###
 # Input: A single string
@@ -14,5 +14,5 @@ def hash_password(password):
 # Output: boolean 1 if matching password, 0 if not
 # Desc: verify a stored password vs recently entered password.
 ###
-def check_password(stored_password, entered_password):
+def check_password(entered_password, stored_password):
 	return argon2.verify(entered_password, stored_password)

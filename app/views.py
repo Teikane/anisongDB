@@ -1,55 +1,53 @@
-from flask import render_template, flash, redirect, session, abort
+from flask import render_template, flash, redirect, session, abort, g
+from flask_login import login_user, logout_user, current_user, login_required
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-
-from app import app
+from app import app, db, login_manager
 from .forms import LoginForm, SignupForm
-from .tabledef import *
+from .tabledef import User
+from .saltyhash import *
 
-engine = create_engine('sqlite:///anisong.db', echo=True)
+@login_manager.user_loader
+def load_user(id):
+	if id is None or id == 'None': 
+		id =-1
+	return User.query.get(int(id))
+
+@app.before_request
+def before_request():
+	g.user = current_user
 
 @app.route('/')
-def home():
-	if not session.get('logged_in'):
-		return index()
-	else:
-		return "Hello <a href='/logout'>Logout</a>"
 @app.route('/index')
 def index():
-	# Create fake user and render home page template
-	user ={'nickname': 'admin'}
+	user = g.user
 	return render_template('index.html', title='Home', user=user)
 
 @app.route('/login', methods=['GET','POST'])
 def login():
+	if g.user is not None and g.user.is_authenticated:
+		return redirect(url_for('index'))
 	form = LoginForm()
 
 	# If form is valid then flash message after redirect
 	if form.validate_on_submit():
-		flash('Login requested for Username="%s", Password="%s",remember_me=%s' %
-			(form.username.data, form.password.data, str(form.remember_me.data)))
 
-		Session = sessionmaker(bind=engine)
-		s = Session()
+		query = query(User).filter(User.username.in_([form.username.data]))
+		uname_combo = query.first()
 
-		query = s.query(User).filter(User.username.in_([form.username.data]),User.password.in_([form.password.data]))
-		username_combo = query.first()
-
-		query = s.query(User).filter(User.email.in_([form.username.data]),User.password.in_([form.password.data]))
+		query = query(User).filter(User.email.in_([form.username.data]))
 		email_combo = query.first()
 
-		if username_combo:
-			session['logged_in'] = True
-			flash ("Hello {}".format(form.username.data))
+		if uname_combo and check_password(form.password.data, uname_combo.password):
+			login_user(uname_combo, remember=True)
+			session['remember_me'] = form.remember_me.data
 
-		elif email_combo:
-			session['logged_in'] = True
-			flash ("Hello {}".format(email_combo))
+		elif email_combo and check_password(form.password.data, email_combo.password):
+			login_user(email_combo, remember=True)
+			session['remember_me'] = form.remember_me.data
 
 		else:
 			flash ('Please check username and password.')
-		return home()
+		return redirect(url_for('index'))
 	return render_template('login.html', 
 							title = 'Log In', 
 							form=form)
@@ -60,17 +58,11 @@ def signup():
 
 	# If form is valid then flash message after redirect
 	if form.validate_on_submit():
-		flash('Signup requested for email="%s", Username="%s", Password="%s" confrim Password= "%s"' %
-			(form.email.data, form.username.data, form.password.data, form.confirm_password.data))
-
-		Session = sessionmaker(bind=engine)
-		s = Session()
-
 		# check database for existing email and user name
-		query = s.query(User).filter(User.email.in_([form.email.data]))
+		query = query(User).filter(User.email.in_([form.email.data]))
 		unqEmail = query.first()
 
-		query = s.query(User).filter(User.username.in_([form.username.data]))
+		query = query(User).filter(User.username.in_([form.username.data]))
 		unqUser = query.first()
 
 		if unqEmail:
@@ -80,18 +72,18 @@ def signup():
 		else:
 			flash ('Here')
 
-			new_user = User(form.email.data, form.username.data, form.password.data)
+			new_user = User(form.email.data, form.username.data, hash_password(form.password.data), level=1)
 
 			s.add(new_user)
 			s.commit()
-			s.commit()
 
-		return redirect('/index')
+		return redirect(url_for('index'))
 	return render_template('signup.html', 
 							title = 'Sign up', 
 							form=form)
 
 @app.route('/logout')
+@login_required
 def logout():
-	session['logged_in'] = False
-	return home()
+	logout_user()
+	return redirect(url_for('index'))

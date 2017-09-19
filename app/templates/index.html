@@ -9,6 +9,9 @@
 {%extends "navbar.html"%}
 {%block content%}
 <body>
+{% if current_user.is_authenticated %}
+  Hi {{ current_user.username }}! Your email is {{ current_user.email }}!
+{% endif %}
 <p> stuffs </p>
  <hr>
 {%endblock%}
