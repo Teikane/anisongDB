@@ -1,2 +1,43 @@
 {% extends "base.html" %}
+{% load i18n %}
+{% load l10n %}
+{% load tz %}
+
 {% block head_title %}AnisongDB{% endblock %}
+
+{% block content %}
+	<div class="jumbotron">
+    <div class="jumbotron">
+      <div class="container">
+        <h1>{% trans "Welcome" %}</h1>
+        <p>{% blocktrans %}This is a translation example.{% endblocktrans %}</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+  </div> 
+
+  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2 id="local-date">{{today}} </h2>
+          <p>This is the time using your local information</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2 id="non-local-date" >{{today|unlocalize}} </h2>
+          <p>This is the defualt time format.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Time Zones</h2>
+          <p> Los Angeles: <span id="time-tz">{{now|time:"H:i"}}</span></p>
+          <p> UTC: <span id="time-utc">{{now|utc|time:"H:i"}}</span></p>
+          <p> Tokyo: <span id="time-ty">
+                        {{now|timezone:'Japan/Tokyo'|time:"H:i"}}</span></p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+	</div>
+	<div class="container">
+{% endblock %}

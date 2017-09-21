@@ -1,5 +1,5 @@
 # www.robotstxt.org/
 
-# Allow crawling of all content
+# Allow crawling of all content. Add / to disallow to disable search eninge.
 User-agent: *
-Disallow:
+Disallow: /
