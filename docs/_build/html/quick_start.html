@@ -1,0 +1,229 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Quick Start Guide &#8212; AnisongDB 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Requirements" href="requirements.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="quick-start-guide">
+<h1>Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="download-anisongdb-project">
+<h2>Download AnisongDB Project<a class="headerlink" href="#download-anisongdb-project" title="Permalink to this headline">¶</a></h2>
+<p>Download a branch from GitHub.</p>
+</div>
+<div class="section" id="virtual-environments-and-settings-files">
+<h2>Virtual environments and Settings Files<a class="headerlink" href="#virtual-environments-and-settings-files" title="Permalink to this headline">¶</a></h2>
+<p>First, find your Python 3 path:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ which python3
+</pre></div>
+</div>
+<p>something like /usr/local/bin/python3.</p>
+<p>Next, create a Development virtual environment with Python 3 installed:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ mkvirtualenv --python=/usr/local/bin/python3 django_anisongdb
+</pre></div>
+</div>
+<p>Go to the virtual enviornment folder with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd $VENV/bin
+</pre></div>
+</div>
+<p>Edit the postactivate file.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ pico postactivate
+</pre></div>
+</div>
+<p>Add the lines:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">DJANGO_SETTINGS_MODULE</span><span class="o">=</span><span class="s2">&quot;anisongdb.settings.development&quot;</span>
+<span class="n">export</span> <span class="n">SECRET_KEY</span><span class="o">=</span><span class="s2">&quot;your_secret_django_key&quot;</span>
+</pre></div>
+</div>
+<p>Next, edit the <strong>predeactivate</strong> file and add the line:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">unset</span> <span class="n">SECRET_KEY</span>
+</pre></div>
+</div>
+<p>Repeat the last steps for your testing environment:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ mkvirtualenv --python=/usr/local/bin/python3 anisong_test
+$ cd $VIRTUAL_ENV/bin
+$ vi postactivate
+</pre></div>
+</div>
+<p>where you have to add the lines:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">DJANGO_SETTINGS_MODULE</span><span class="o">=</span><span class="s2">&quot;anisong.settings.testing&quot;</span>
+<span class="n">export</span> <span class="n">SECRET_KEY</span><span class="o">=</span><span class="s2">&quot;your_secret_django_key&quot;</span>
+</pre></div>
+</div>
+<p>and in the predeactivate file:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">unset</span> <span class="n">SECRET_KEY</span>
+</pre></div>
+</div>
+<p>Next, install the packages in each environment:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ workon django_anisongdb
+$ pip install -r requirements/development.txt
+$ workon anisong_test
+$ pip install -r requirements/testing.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="internationalization-and-localization">
+<h2>Internationalization and Localization<a class="headerlink" href="#internationalization-and-localization" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="settings">
+<h3>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h3>
+<p>The default language for this Project is <strong>English</strong>, and we use internatinalization to translate the text into Japanese hopefully…</p>
+<p>If you want to change the translation language, or include a new one, you just need to modify the <strong>LANGUAGES</strong> variable in the file <em>settings/base.py</em>. The language codes that define each language can be found <a href="http://msdn.microsoft.com/en-us/library/ms533052(v=vs.85).aspx" target="_blank">here</a>.</p>
+<p>For example, if you want to use German you should include:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="o">...</span>
+    <span class="s1">&#39;de&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;German&quot;</span><span class="p">),</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also specify a dialect, like Luxembourg’s German with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="o">...</span>
+    <span class="s1">&#39;de-lu&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Luxemburg&#39;s German&quot;</span><span class="p">),</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Note: the name inside the translation function _(“”) is the language name in the default language (English).</p>
+<p>More information on the <a href="http://marinamele.com/taskbuster-django-tutorial/internationalization-localization-languages-time-zones" target="_blank">TaskBuster post</a>.</p>
+</div>
+<div class="section" id="translation">
+<h3>Translation<a class="headerlink" href="#translation" title="Permalink to this headline">¶</a></h3>
+<p>Go to the terminal, inside the anisong_project folder and create the files to translate with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ python manage.py makemessages -l ja
+</pre></div>
+</div>
+<p>change the language “ja” for your selected language.</p>
+<p>Next, go to the locale folder of your language:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd auto/locale/ja/LC_MESSAGES
+</pre></div>
+</div>
+<p>where anisongdb is your project folder. You have to edit the file <em>django.po</em> and translate the strings. You can find more information about how to translate the strings <a href="http://marinamele.com/taskbuster-django-tutorial/internationalization-localization-languages-time-zones#inter-translation" target="_blank">here</a>.</p>
+<p>Once the translation is done, compile your messages with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ python manage.py compilemessages -l ja
+</pre></div>
+</div>
+</div>
+<div class="section" id="tests">
+<h3>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h3>
+<p>We need to update the languages in our Tests to make sure the translation works correclty. Open the file <em>functional_tests/test_all_users.py</em>:</p>
+<ul class="simple">
+<li>in <strong>test_internationalization</strong>, update your languages with the translation of title text, here “Welcome to AnisongDB!”</li>
+<li>in <strong>test_localization</strong>, update your languages.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="useful-commands">
+<h2>Useful commands<a class="headerlink" href="#useful-commands" title="Permalink to this headline">¶</a></h2>
+<p>A list of all the commands used to run this template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ workon django_anisong
+$ workon anisong_test
+
+$ python manage.py makemessages -l ca
+$ python manage.py compilemessages -l ca
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">AnisongDB</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#download-anisongdb-project">Download AnisongDB Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#virtual-environments-and-settings-files">Virtual environments and Settings Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#internationalization-and-localization">Internationalization and Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-commands">Useful commands</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="requirements.html" title="previous chapter">Requirements</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Kiet Nguyen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/quick_start.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
