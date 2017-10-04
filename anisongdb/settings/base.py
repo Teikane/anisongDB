@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.translation import ugettext_lazy as _
+
 LANGUAGES = (
     ('en', _('English')),
     ('jp', _('Japanese')),

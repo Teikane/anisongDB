@@ -1318,3 +1318,122 @@ JavaScript error: http://localhost:44351/static/js/vendor/bootstrap.min.js, line
 1505964929145	Marionette	INFO	New connections will no longer be accepted
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 [Child 4611] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-S0wyi8/firefox-55.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1507086069866	geckodriver	INFO	geckodriver 0.19.0
+1507086069870	geckodriver	INFO	Listening on 127.0.0.1:39911
+1507086071085	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.133oVH86fXj1"
+1507086072039	Marionette	INFO	Enabled via --marionette
+1507086075110	Marionette	INFO	Listening on port 34521
+JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
+1507086075167	Marionette	WARN	TLS certificate errors will be ignored for this session
+1507086075247	Marionette	DEBUG	loaded listener.js
+1507086075320	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1507086075395	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1507086075400	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://localhost:41485/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1507086075846	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:41485/en/"
+1507086076109	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:41485/en/"
+1507086076290	Marionette	INFO	New connections will no longer be accepted
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 23502] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-S0wyi8/firefox-55.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1507086076693	geckodriver	INFO	geckodriver 0.19.0
+1507086076698	geckodriver	INFO	Listening on 127.0.0.1:37487
+1507086077777	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.bbqV9hsgPaUD"
+1507086078773	Marionette	INFO	Enabled via --marionette
+1507086081836	Marionette	INFO	Listening on port 42193
+1507086081865	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
+1507086081941	Marionette	DEBUG	loaded listener.js
+1507086082043	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1507086082086	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1507086082088	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1507086082129	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:41485/robots.txt"
+1507086082145	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:41485/robots.txt"
+1507086082272	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost:41485/robots.txt"
+1507086082297	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost:41485/robots.txt"
+1507086082297	Marionette	DEBUG	Received DOM event "unload" for "http://localhost:41485/robots.txt"
+1507086082325	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:41485/humans.txt"
+1507086082337	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:41485/humans.txt"
+1507086082406	Marionette	INFO	New connections will no longer be accepted
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 23601] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-S0wyi8/firefox-55.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1507086082801	geckodriver	INFO	geckodriver 0.19.0
+1507086082806	geckodriver	INFO	Listening on 127.0.0.1:52819
+1507086083899	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.2887qxvyOmyj"
+1507086084822	Marionette	INFO	Enabled via --marionette
+1507086087866	Marionette	INFO	Listening on port 35505
+1507086087903	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
+1507086088008	Marionette	DEBUG	loaded listener.js
+1507086088091	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1507086088140	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1507086088140	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://localhost:41485/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1507086088722	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:41485/en/"
+1507086088962	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:41485/en/"
+1507086089002	Marionette	INFO	New connections will no longer be accepted
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 23696] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-S0wyi8/firefox-55.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1507086089416	geckodriver	INFO	geckodriver 0.19.0
+1507086089418	geckodriver	INFO	Listening on 127.0.0.1:48885
+1507086090597	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Co7rAMesNeF6"
+1507086091241	Marionette	INFO	Enabled via --marionette
+1507086094267	Marionette	INFO	Listening on port 41039
+JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
+1507086094364	Marionette	WARN	TLS certificate errors will be ignored for this session
+1507086094447	Marionette	DEBUG	loaded listener.js
+1507086094531	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1507086094597	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1507086094597	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://localhost:41485/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1507086095154	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:41485/en/"
+1507086095398	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:41485/en/"
+1507086095523	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost:41485/en/"
+1507086095573	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost:41485/en/"
+1507086095573	Marionette	DEBUG	Received DOM event "unload" for "http://localhost:41485/en/"
+JavaScript error: http://localhost:41485/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1507086095854	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:41485/jp/"
+1507086095924	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:41485/jp/"
+1507086096050	Marionette	INFO	New connections will no longer be accepted
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 539: TypeError: this.tablesData[table] is undefined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 23791] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-S0wyi8/firefox-55.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1507086096497	geckodriver	INFO	geckodriver 0.19.0
+1507086096503	geckodriver	INFO	Listening on 127.0.0.1:41543
+1507086097691	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.aSlaF6dfAOJq"
+1507086098748	Marionette	INFO	Enabled via --marionette
+1507086101825	Marionette	INFO	Listening on port 38565
+JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
+1507086101888	Marionette	WARN	TLS certificate errors will be ignored for this session
+1507086101951	Marionette	DEBUG	loaded listener.js
+1507086102039	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1507086102086	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1507086102087	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://localhost:41485/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1507086102552	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:41485/en/"
+1507086102868	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:41485/en/"
+1507086103021	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost:41485/en/"
+1507086103053	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost:41485/en/"
+1507086103055	Marionette	DEBUG	Received DOM event "unload" for "http://localhost:41485/en/"
+JavaScript error: http://localhost:41485/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1507086103342	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:41485/jp/"
+1507086103434	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:41485/jp/"
+1507086103635	Marionette	INFO	New connections will no longer be accepted
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 23892] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-S0wyi8/firefox-55.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1507086104050	geckodriver	INFO	geckodriver 0.19.0
+1507086104058	geckodriver	INFO	Listening on 127.0.0.1:40841
+1507086105219	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.fzugIX1bJtSH"
+1507086106185	Marionette	INFO	Enabled via --marionette
+1507086108818	Marionette	INFO	Listening on port 38077
+1507086108874	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
+1507086108969	Marionette	DEBUG	loaded listener.js
+1507086109045	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1507086109111	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1507086109112	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://localhost:41485/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1507086109677	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:41485/en/"
+1507086109939	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:41485/en/"
+1507086110119	Marionette	INFO	New connections will no longer be accepted
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 23985] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-S0wyi8/firefox-55.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
