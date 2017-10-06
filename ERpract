@@ -1,0 +1,67 @@
+Anisong DB
+
+Users
+email					Varchar 50  	U NN
+password				Varchar 255 	  NN
+username				Varchar 50  	U NN
+dob						DATE
+gender					TEXT
+level					INT
+creation start time		DATE
+
+Albums
+album_id 				INT 			U NN
+song_id (F)				INT 			U NN
+artist_id (F)			INT 			U NN
+year					DATE
+rating					DOUBLE(?)
+
+StudioProducer
+studio_id 				INT 			U NN
+name					Varchar 255
+location				TEXT(?)
+description				TEXT
+
+Artists
+artist_id 				INT 			U NN
+fname					VARCHAR 50
+lname					VARCHAR 50
+alias					VARCHAR 50
+dob 					DATE
+gender					TEXT
+location				TEXT
+bio/desc 				TEXT
+portfolio link 			TEXT
+social media link 		TEXT
+
+Composer
+composer_id 			INT 			U NN
+fname					VARCHAR 50
+lname					VARCHAR 50
+alias					VARCHAR 50
+dob 					DATE
+gender					TEXT
+location				TEXT
+bio/desc 				TEXT
+portfolio link 			TEXT
+social media link 		TEXT
+
+Songs
+song_id 				INT 			U NN
+name 					VARCHAR 50
+composer 				VARCHAR 50
+artist/band 			VARCHAR 50
+album 					VARCHAR 50
+year 					DATE
+genre 					VARCHAR 50
+tag 					VARCHAR 50
+rating 					DOUBLE
+
+Favorite_Song
+song_id, username
+
+Favorite_Artist
+Artist_id, username
+
+Favorite_Album
+album_id, username
