@@ -18,11 +18,17 @@ from django.contrib import admin
 from django.conf.urls .i18n import i18n_patterns
 from .views import home, home_files
 
+admin.autodiscover()
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    # Admin Urls
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^$', home, name='home'),
     url(r'^(?P<filename>(robots.txt)|(humans.txt))$',
     		home_files, name='home-files'),
+
+    # All Auth Urls
+    url(r'^accounts/', include('allauth.urls')),
 ]
 
 urlpatterns += i18n_patterns(
