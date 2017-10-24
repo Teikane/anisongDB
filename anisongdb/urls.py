@@ -16,22 +16,30 @@ Including another URLconf
 from django.conf.urls import url, include 
 from django.contrib import admin
 from django.conf.urls .i18n import i18n_patterns
-from .views import home, home_files
+from django.contrib.auth import views as auth_views
+from .views import home, home_files, signup
 
 admin.autodiscover()
 
 urlpatterns = [
     # Admin Urls
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', home, name='home'),
+    url(r'^$', home, name="home"),
     url(r'^(?P<filename>(robots.txt)|(humans.txt))$',
     		home_files, name='home-files'),
 
+    url(r'i18n/', include("django.conf.urls.i18n")),
+
+    # local Accounts
+    url(r'^signup/$', signup, name="signup"),
+    url(r'^accounts/login/$', auth_views.login, {"template_name": "anisongdb/login.html"}, name="login"),
+
     # All Auth Urls
-    url(r'^accounts/', include('allauth.urls')),
+    url(r'^accounts/', include("allauth.urls")),
+    # Logout
+    url(r'^accounts/logout/$', auth_views.logout, {"next_page": "/"}, name="logout"),
 ]
 
 urlpatterns += i18n_patterns(
-	url(r'^$', home, name= 'home'),
+	url(r'^$', home, name= "home"),
 	url(r'^admin/', include(admin.site.urls)),
 )

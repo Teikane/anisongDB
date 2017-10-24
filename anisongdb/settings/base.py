@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'anisongdb',
 ]
 
 # Adding Allauth
@@ -140,7 +141,7 @@ AUTHENTICATION_BACKENDS = (
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = "none"
 SOCIALACCOUNT_QUERY_EMAIL = True
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "home"
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/

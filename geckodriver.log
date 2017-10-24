@@ -1533,3 +1533,92 @@ dispatch/</<@chrome://marionette/content/listener.js:530:40
 
 ###!!! [Parent][MessageChannel] Error: (msgtype=0x2400FC,name=PContent::Msg_AsyncMessage) Closed channel: cannot send/recv
 
+1508416124380	geckodriver	INFO	geckodriver 0.19.0
+1508416124382	geckodriver	INFO	Listening on 127.0.0.1:57965
+1508416125544	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.NPd5ipLgguY7"
+1508416125742	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508416126122	Marionette	INFO	Enabled via --marionette
+1508416128416	Marionette	INFO	Listening on port 41893
+1508416128535	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508416128653	Marionette	DEBUG	Register listener.js for window 2147483649
+1508416128808	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508416128924	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508416128927	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://localhost:49069/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1508416129507	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:49069/en/"
+1508416129672	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:49069/en/"
+1508416140285	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost:49069/en/"
+1508416140599	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost:49069/en/"
+1508416140600	Marionette	DEBUG	Received DOM event "unload" for "http://localhost:49069/en/"
+1508416140909	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://accounts.google.com/o/oauth2/auth?client_id=653313745649-1vh9ogh9h7dts979mpr9aebtao6l4pt2.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A49069%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&scope=email+profile&state=REFuelscDCQp&response_type=code"
+1508416140928	Marionette	DEBUG	Received DOM event "pageshow" for "https://accounts.google.com/o/oauth2/auth?client_id=653313745649-1vh9ogh9h7dts979mpr9aebtao6l4pt2.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A49069%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&scope=email+profile&state=REFuelscDCQp&response_type=code"
+1508416162012	Marionette	INFO	New connections will no longer be accepted
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 24342] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-l1g98U/firefox-56.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1508416168431	geckodriver	INFO	geckodriver 0.19.0
+1508416168439	geckodriver	INFO	Listening on 127.0.0.1:48353
+1508416169665	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.S088Wq1oNjS4"
+1508416170062	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508416170565	Marionette	INFO	Enabled via --marionette
+1508416173202	Marionette	INFO	Listening on port 45561
+1508416173230	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508416173350	Marionette	DEBUG	Register listener.js for window 2147483649
+1508416173487	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508416173613	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508416173613	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://localhost:34485/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1508416174436	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:34485/en/"
+1508416174732	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:34485/en/"
+1508416185459	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost:34485/en/"
+1508416185784	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost:34485/en/"
+1508416185784	Marionette	DEBUG	Received DOM event "unload" for "http://localhost:34485/en/"
+1508416186144	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://accounts.google.com/o/oauth2/auth?client_id=653313745649-1vh9ogh9h7dts979mpr9aebtao6l4pt2.apps.googleusercontent.com&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A34485%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&state=dyyUflqpciqo&scope=profile+email"
+1508416186159	Marionette	DEBUG	Received DOM event "pageshow" for "https://accounts.google.com/o/oauth2/auth?client_id=653313745649-1vh9ogh9h7dts979mpr9aebtao6l4pt2.apps.googleusercontent.com&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A34485%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&state=dyyUflqpciqo&scope=profile+email"
+1508416207277	Marionette	INFO	New connections will no longer be accepted
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 24470] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-l1g98U/firefox-56.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1508416396078	geckodriver	INFO	geckodriver 0.19.0
+1508416396080	geckodriver	INFO	Listening on 127.0.0.1:60349
+1508416397148	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.978QGZD1RrIB"
+1508416397372	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508416397615	Marionette	INFO	Enabled via --marionette
+1508416399564	Marionette	INFO	Listening on port 40815
+1508416399603	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508416399699	Marionette	DEBUG	Register listener.js for window 2147483649
+1508416399766	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508416399871	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508416399874	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://localhost:54447/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1508416400420	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:54447/en/"
+1508416400605	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:54447/en/"
+1508416411199	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost:54447/en/"
+1508416411500	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost:54447/en/"
+1508416411501	Marionette	DEBUG	Received DOM event "unload" for "http://localhost:54447/en/"
+1508416411798	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://accounts.google.com/o/oauth2/auth?client_id=653313745649-1vh9ogh9h7dts979mpr9aebtao6l4pt2.apps.googleusercontent.com&scope=email+profile&redirect_uri=http%3A%2F%2Flocalhost%3A54447%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&state=1NfNiMPJGrW5&response_type=code"
+1508416411823	Marionette	DEBUG	Received DOM event "pageshow" for "https://accounts.google.com/o/oauth2/auth?client_id=653313745649-1vh9ogh9h7dts979mpr9aebtao6l4pt2.apps.googleusercontent.com&scope=email+profile&redirect_uri=http%3A%2F%2Flocalhost%3A54447%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&state=1NfNiMPJGrW5&response_type=code"
+1508416432905	Marionette	INFO	New connections will no longer be accepted
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 24655] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-l1g98U/firefox-56.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1508417775255	geckodriver	INFO	geckodriver 0.19.0
+1508417775258	geckodriver	INFO	Listening on 127.0.0.1:50963
+1508417776765	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.YEU0Nkz8UTg6"
+1508417777173	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1508417777470	Marionette	INFO	Enabled via --marionette
+1508417780259	Marionette	INFO	Listening on port 37545
+1508417780322	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508417780455	Marionette	DEBUG	Register listener.js for window 2147483649
+1508417780610	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508417780751	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508417780751	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://localhost:39359/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1508417781388	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:39359/en/"
+1508417781603	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:39359/en/"
+1508417792322	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost:39359/en/"
+1508417792634	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost:39359/en/"
+1508417792634	Marionette	DEBUG	Received DOM event "unload" for "http://localhost:39359/en/"
+1508417792975	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://accounts.google.com/o/oauth2/auth?response_type=code&scope=profile+email&state=ww3lbk3mgllF&redirect_uri=http%3A%2F%2Flocalhost%3A39359%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&client_id=653313745649-1vh9ogh9h7dts979mpr9aebtao6l4pt2.apps.googleusercontent.com"
+1508417792991	Marionette	DEBUG	Received DOM event "pageshow" for "https://accounts.google.com/o/oauth2/auth?response_type=code&scope=profile+email&state=ww3lbk3mgllF&redirect_uri=http%3A%2F%2Flocalhost%3A39359%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&client_id=653313745649-1vh9ogh9h7dts979mpr9aebtao6l4pt2.apps.googleusercontent.com"
+JavaScript error: http://localhost:39359/static/js/vendor/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+1508417814083	Marionette	INFO	New connections will no longer be accepted
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 25438] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-l1g98U/firefox-56.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
