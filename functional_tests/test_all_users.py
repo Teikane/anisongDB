@@ -23,6 +23,11 @@ class HomeNewVisitorTest(StaticLiveServerTestCase):
 		self.browser.get(self.get_full_url("home"))
 		self.assertIn("AnisongDB", self.browser.title)
 
+	def test_home_view_status_code(self):
+		url = reverse("home")
+		response = self.client.get(url)
+		self.assertEquals(response.status_code, 200)
+
 	def test_h1_css(self):
 		self.browser.get(self.get_full_url("home"))
 		h1 = self.browser.find_element_by_tag_name("h1")

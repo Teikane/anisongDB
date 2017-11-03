@@ -16,28 +16,34 @@ First, find your Python 3 path::
  
     $ which python3
  
-something like /usr/local/bin/python3.
- 
 Next, create a Development virtual environment with Python 3 installed::
  
     $ mkvirtualenv --python=/usr/local/bin/python3 django_anisongdb
  
-Go to the virtual enviornment folder with::
+If using virtualenviornmentwrapper either set PATH or use these lines::
+
+    $ export WORKON_HOME= ~/venv/
+    $ source /home/usrname/.local/bin/virtualenvwrapper.sh
+
+Edit the postactivate file in the /bin/ inside virtualenv::
  
-    $ cd $VENV/bin
- 
-Edit the postactivate file.::
- 
-    $ pico postactivate
+    $ vi postactivate
  
 Add the lines: ::
  
     export DJANGO_SETTINGS_MODULE="anisongdb.settings.development"
-    export SECRET_KEY="your_secret_django_key"
+    export SECRET_KEY="secret_django_key"
+    
+    export DATABASE_NAME="anisongdb"
+    export DATABASE_USER="mirose"
+    export DATABASE_PASSWORD="database_password"
  
-Next, edit the **predeactivate** file and add the line::
+Next, edit the **predeactivate** to unset::
  
     unset SECRET_KEY
+    unset DATABASE_NAME
+    unset DATABASE_USER
+    unset DATABASE_PASSWORD
  
 Repeat the last steps for your testing environment::
  
@@ -45,14 +51,21 @@ Repeat the last steps for your testing environment::
     $ cd $VIRTUAL_ENV/bin
     $ vi postactivate
  
-where you have to add the lines::
+postactivate::
  
     export DJANGO_SETTINGS_MODULE="anisong.settings.testing"
-    export SECRET_KEY="your_secret_django_key"
+    export SECRET_KEY="secret_django_key"
+    
+    export DATABASE_NAME="anisongdb"
+    export DATABASE_USER="mirose"
+    export DATABASE_PASSWORD="database_password"
  
-and in the predeactivate file::
+predeactivate::
  
     unset SECRET_KEY
+    unset DATABASE_NAME
+    unset DATABASE_USER
+    unset DATABASE_PASSWORD
  
 Next, install the packages in each environment::
  

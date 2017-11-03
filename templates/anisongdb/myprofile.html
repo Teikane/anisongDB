@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load accounts_extra %}
+
+{% block head_title %}AnisongDB - My Profile{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <div class="container">
+       
+      <!-- Tab/Pills -->
+      <ul class="nav nav-pills">
+        <li {% block profile_active %}{% endblock %}><a data-toggle="pill" href="{% url 'profile' %}">Profile</a></li>
+         <li {% block settings_active %}{% endblock %}><a data-toggle="pill" href="{% url 'settings' %}">Account Settings</a></li>
+        <li {% block privacy_active %}{% endblock %}><a data-toggle="pill" href="{% url 'privacy' %}">Privacy</a></li>
+        <li {% block social_active %}{% endblock %}><a data-toggle="pill" href="{% url 'social' %}">Social Integrations</a></li>
+      </ul>
+
+      {% block myprofile_tab %}{% endblock %}
+  </div><!--/.container-->
+</div><!--/.page-container-->
+{% endblock %}

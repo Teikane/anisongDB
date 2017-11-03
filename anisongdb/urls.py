@@ -13,11 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include 
+# -*- coding: utf-8 -*-
+from django.conf.urls import url, include
 from django.contrib import admin
-from django.conf.urls .i18n import i18n_patterns
-from django.contrib.auth import views as auth_views
-from .views import home, home_files, signup
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.i18n import i18n_patterns
+
+
+from .views import home, home_files
 
 admin.autodiscover()
 
@@ -30,16 +33,14 @@ urlpatterns = [
     url(r'i18n/', include("django.conf.urls.i18n")),
 
     # local Accounts
-    url(r'^signup/$', signup, name="signup"),
-    url(r'^accounts/login/$', auth_views.login, {"template_name": "anisongdb/login.html"}, name="login"),
-
+    url(r'^accounts/', include("apps.accounts.urls")),
     # All Auth Urls
     url(r'^accounts/', include("allauth.urls")),
-    # Logout
-    url(r'^accounts/logout/$', auth_views.logout, {"next_page": "/"}, name="logout"),
-]
+    ]
 
 urlpatterns += i18n_patterns(
 	url(r'^$', home, name= "home"),
 	url(r'^admin/', include(admin.site.urls)),
 )
+
+urlpatterns += staticfiles_urlpatterns()

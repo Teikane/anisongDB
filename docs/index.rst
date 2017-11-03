@@ -10,7 +10,7 @@ Eh, for now just a simple database for Anisong, J-pop, J-rock,
 games, and doujin music. Maybe more in the future.
 
 Some features that are currently planned 
-- simple search by track or artist
+- simple search by track, artist, album
 - easy to add new tracks
 
 
@@ -22,7 +22,7 @@ Contents
 
    requirements
    quick_start
-
+   credits
 
 Indices and tables
 ==================

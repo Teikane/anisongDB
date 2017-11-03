@@ -4,5 +4,7 @@
    Author's custom styles
    ========================================================================== */
 
-
-.jumbotron h1 {color: rgba(200, 50, 255, 1);}
+.jumbotron h1 {
+	text-align: center;
+	color: rgba(0, 0, 0, 1);
+}

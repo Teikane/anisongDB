@@ -3,10 +3,59 @@
 	{
 		"selected_items":
 		[
+			[
+				"glph",
+				"glyphicon-log-in"
+			],
+			[
+				"gl",
+				"glyphicon-log-in"
+			],
+			[
+				"sig",
+				"SignUpForm"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "templates/base.html",
+			"settings":
+			{
+				"buffer_size": 4428,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/anisongdb/index.html",
+			"settings":
+			{
+				"buffer_size": 1768,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/css/main.css",
+			"settings":
+			{
+				"buffer_size": 252,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/css/navbar.css",
+			"settings":
+			{
+				"buffer_size": 3397,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": ".navbar {"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -15,12 +64,16 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"Snippet: For Loop"
+			]
 		],
-		"width": 0.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -40,10 +93,80 @@
 	},
 	"expanded_folders":
 	[
-		"/home/mirose/venv/django_anisong/anisongdb_project"
+		"/home/mirose/venv/django_anisong/anisongdb_project",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb",
+		"/home/mirose/venv/django_anisong/anisongdb_project/static",
+		"/home/mirose/venv/django_anisong/anisongdb_project/static/css",
+		"/home/mirose/venv/django_anisong/anisongdb_project/static/fonts",
+		"/home/mirose/venv/django_anisong/anisongdb_project/templates",
+		"/home/mirose/venv/django_anisong/anisongdb_project/templates/anisongdb"
 	],
 	"file_history":
 	[
+		"/home/mirose/venv/django_anisong/anisongdb_project/templates/anisongdb/settings.html",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/urls.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/apps/accounts/views.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/settings/base.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/templates/anisongdb/index.html",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/views.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/forms.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/settings/development.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/apps/accounts/admin.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/apps/accounts/urls.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/apps/local_auth/urls.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/apps/local_auth/views.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/apps/accounts/apps.py",
+		"/home/mirose/venv/tut/myproject/myproject/urls.py",
+		"/home/mirose/venv/tut/myproject/myproject/settings.py",
+		"/home/mirose/venv/tut/myproject/myproject/apps/polls5/urls.py",
+		"/home/mirose/venv/tut/myproject/myproject/apps/polls2/views.py",
+		"/home/mirose/venv/tut/myproject/polls/urls.py",
+		"/home/mirose/venv/tut/myproject/myproject/apps/polls2/urls.py",
+		"/home/mirose/venv/tut/myproject/myproject/apps/polls3/urls.py",
+		"/home/mirose/venv/tut/myproject/myproject/apps/polls3/views.py",
+		"/home/mirose/venv/tut/myproject/myproject/apps/polls5/views.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/apps/local_Auth/models.py",
+		"/home/mirose/venv/tut/myproject/polls/views.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/apps/local_Auth/views.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/apps/local_Auth/urls.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/apps/local_Auth/apps.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/apps/localAuth/views.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/templates/anisongdb/login.html",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/templates/anisongdb/signup.html",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/model.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/.gitignore",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/templates/base.html",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/models.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/templates/signup.html",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/settings/staging.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/fixtures/allauth_fixture.json",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/settings/testing.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/functional_tests/test_allauth.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/fixtures/google_user.json",
+		"/home/mirose/venv/django_anisong/bin/postactivate",
+		"/home/mirose/venv/django_anisong/anisongdb_project/requirements/base.txt",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/test.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/functional_tests/test_all_users.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/requirements/development.txt",
+		"/home/mirose/venv/django_anisong/anisongdb_project/docs/conf.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/docs/index.rst",
+		"/home/mirose/venv/django_anisong/anisongdb_project/docs/requirements.rst",
+		"/home/mirose/venv/django_anisong/anisongdb_project/docs/quick_start.rst",
+		"/home/mirose/venv/django_anisong/anisongdb_project/docs/_build/html/index.html",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/locale/jp/LC_MESSAGES/django.po",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/settings/__init__.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/templates/anisongdb/index.html",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/templates/robots.txt",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/templates/humans.txt",
+		"/home/mirose/venv/django_anisong/anisongdb_project/requirements/testing.txt",
+		"/home/mirose/venv/django_anisong/anisongdb_project/functional_tests/all_users.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/static/css/main.css",
+		"/home/mirose/venv/django_anisong/anisongdb_project/views.py",
+		"/home/mirose/venv/django_anisong/anisongdb_project/anisongdb/settings/production.py",
+		"/home/mirose/venv/django_anisong/bin/predeactivate",
+		"/home/mirose/venv/django_anisong/anisongdb_project/requirements/requirements",
+		"/home/mirose/venv/django_anisong/anisongdb_project/requirements.txt",
+		"/home/mirose/geckodriver",
 		"/home/mirose/venv/django_anisongdb/anisongdb/anisongdb/settings.py",
 		"/home/mirose/anisongDB/app/__init__.py",
 		"/home/mirose/anisongDB/config.py",
@@ -68,11 +191,11 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 		]
@@ -82,6 +205,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"site_id",
+			"Task",
+			"<script src=",
+			"<link rel=\"stylesheet\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -99,18 +226,138 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "templates/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4428,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1854,
+								1854
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 648.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "templates/anisongdb/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								286,
+								286
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "static/css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								252,
+								252
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "static/css/navbar.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3397,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3318,
+								3318
+							]
+						],
+						"settings":
+						{
+							"auto_name": ".navbar {",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1944.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 26.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -143,7 +390,7 @@
 	"project": "AnisongDB.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -1,4 +1,5 @@
 {% load staticfiles %}
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -22,7 +23,8 @@
         </style>
         <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
-
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/myprofile.css' %}">
         <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
     {% block head_css %}{% endblock %}
     {% block head_javascript %}{% endblock %}
@@ -34,29 +36,32 @@
         <![endif]-->
     {% block navbar %}
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="/">AnisongDB</a>
         </div>
+        <form class="navbar-form navbar-left">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" class="navSearch">
+              <div class="input-group-btn">
+                <button class= "btn btn-default" type="submit">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+            </div>
+        </form>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
+          <ul class="nav navbar-right navbar-nav">
             {% if user.is_authenticated %}
-                <a id="logout" href="/accounts/logout" class="btn btn-success">Logout</a>
-                <a> Welcome {{user.get_username}} </a>
+                <li><a id="logout" href="/accounts/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                <li><a id="myprofile" href="{% url 'myprofile' %}"><span class="glyphicon glyphicon-user"> {{user.get_username}}</a></li>
+                <li><a id="socialaccount_connections" href="/accounts/social/connections"><span class="glyphicon glyphicon-user">Placeholder</a></li>
             {% else %}
-                <a id="google_login" href="/accounts/google/login" class="btn btn-success">
-                  Sign in with google
-                </a>
-                <a id="login" href="{% url 'login' %}" class="btn btn-success">Login</a>
-                <a id="signup" href="/signup" class="btn btn-success">Sign up</a>
+                <li><a id="google_login" href="/accounts/google/login" class="btn btn-default-outline">Google Login</a></li>
+                <li><a id="login" href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a id="signup" href="{% url 'signup' %}"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
             {% endif %}
-          </form>
+          </ul>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
