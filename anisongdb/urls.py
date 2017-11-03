@@ -14,9 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 # -*- coding: utf-8 -*-
+from django.conf import settings
+from django.conf.urls.static import static
 from django.conf.urls import url, include
 from django.contrib import admin
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.i18n import i18n_patterns
 
 
@@ -36,11 +37,9 @@ urlpatterns = [
     url(r'^accounts/', include("apps.accounts.urls")),
     # All Auth Urls
     url(r'^accounts/', include("allauth.urls")),
-    ]
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += i18n_patterns(
 	url(r'^$', home, name= "home"),
 	url(r'^admin/', include(admin.site.urls)),
 )
-
-urlpatterns += staticfiles_urlpatterns()

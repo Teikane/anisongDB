@@ -4,7 +4,10 @@
    Author's custom styles
    ========================================================================== */
 
-.jumbotron h1 {
-	text-align: center;
-	color: rgba(0, 0, 0, 1);
+.jumbotron {
 }
+
+.btn-group {
+	padding-top: 15px;
+}
+
