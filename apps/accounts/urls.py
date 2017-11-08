@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from django.conf.urls import url, include
-from apps.accounts import views as accounts_views
 from django.contrib.auth import views as auth_views
+
+from apps.accounts import views as accounts_views
 
 urlpatterns = [
     # Account views

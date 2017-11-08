@@ -22,9 +22,8 @@
             }
         </style>
         <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/main.css' %}">
-        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
-        <link rel="stylesheet" href="{% static 'css/myprofile.css' %}">
+        <!-- THEMES -->
+            <link rel="stylesheet" href="{% static 'css/themes/bikki.css' %}">
         <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
     {% block head_css %}{% endblock %}
     {% block head_javascript %}{% endblock %}
@@ -35,7 +34,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     {% block navbar %}
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">AnisongDB</a>
@@ -54,10 +53,10 @@
           <ul class="nav navbar-right navbar-nav">
             {% if user.is_authenticated %}
                 <li><a id="logout" href="/accounts/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-                <li><a id="myprofile" href="{% url 'myprofile' %}"><span class="glyphicon glyphicon-user"> {{user.get_username}}</a></li>
+                <li><a id="myprofile" href="{% url 'profile' %}"><span class="glyphicon glyphicon-user"> {{user.get_username}}</a></li>
                 <li><a id="socialaccount_connections" href="/accounts/social/connections"><span class="glyphicon glyphicon-user">Placeholder</a></li>
             {% else %}
-                <li><a id="google_login" href="/accounts/google/login" class="btn btn-default-outline">Google Login</a></li>
+                <li><a id="google_login" href="/accounts/google/login">Google Login</a></li>
                 <li><a id="login" href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 <li><a id="signup" href="{% url 'signup' %}"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
             {% endif %}
@@ -73,7 +72,22 @@
       <hr>
 
       <footer>
-        <p>&copy; Company 2015</p>
+        <p>&copy; AnisongDB 2017</p>
+        
+        <div class="btn-group btn-custom_on">
+          <a class="btn dropdown-toggle btn-custom_on" data-toggle="dropdown" href="#">
+            Themes
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu dropdown-custom">
+            <li><a href="">Choice1</a></li>
+            <li><a href="#">Choice2</a></li>
+            <li><a href="#">Choice3</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Choice..</a></li>
+          </ul>
+        </div><!-- theme selector -->
+
       </footer>
     </div> <!-- /container -->        <script src="{% static '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js' %}"></script>
         <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

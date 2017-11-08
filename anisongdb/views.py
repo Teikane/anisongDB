@@ -12,3 +12,6 @@ def home(request):
 
 def home_files(request, filename):
 	return render(request, filename, {}, content_instance=RequestContext(request))
+
+def results(request):
+	return render(request, "anisongdb/results.html", content_type="text")

@@ -21,7 +21,7 @@ from django.contrib import admin
 from django.conf.urls.i18n import i18n_patterns
 
 
-from .views import home, home_files
+from .views import home, home_files, results
 
 admin.autodiscover()
 
@@ -37,6 +37,10 @@ urlpatterns = [
     url(r'^accounts/', include("apps.accounts.urls")),
     # All Auth Urls
     url(r'^accounts/', include("allauth.urls")),
+
+    url(r'^results/$', results, name="results"),
+
+
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += i18n_patterns(
