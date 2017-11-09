@@ -53,9 +53,10 @@ table col[class*="col-"] {
   color: #000000;
 }
 
-.btn-custom_off {
+.btn-custom_on.active {
   background-color: #c45e00;
   color: #444444;
+  box-shadow: inset 0 3px 5px rgb(0, 0, 0);
 }
 
 /* ==========================================================================
@@ -154,11 +155,16 @@ table col[class*="col-"] {
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: black;
-    background-color: #fc8a20;
+    background-color: #c45e00;
 }
 
 .nav>li>a:hover, 
 .nav>li>a:focus {
-  background-color: grey;
+  background-color: #ff9a3d;
+  color: #444444;
+}
 
+.nav-justified > li > a{
+  background-color: #fc8a20;
+  color: black;
 }
