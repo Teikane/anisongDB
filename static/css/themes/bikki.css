@@ -1,4 +1,16 @@
 /* ==========================================================================
+   Headers
+   ========================================================================== */
+.banner{
+  background-color: #3f2c1e;
+  color: white;
+  height: 100px;
+  background-image: url(https://static.zerochan.net/Tachibana.Hibiki.full.2111912.jpg);
+  background-position: 50% 30%;
+  padding: 40px;
+}
+
+/* ==========================================================================
    Tables
    .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
    background-color: #efefef;
