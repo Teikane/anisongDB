@@ -11,13 +11,9 @@
 {% block content %}
 
 <header class="banner">
-  <div class="container">
-  </div>
 </header>
 
-<div class="page-container">
-    <div class="container">
-       
+<div class="banner-tabs">
       <!-- Tabs -->
       <ul class="nav nav-pills nav-justified pills_myprofile">
         <li {% block profile_active %}{% endblock %}><a data-toggle="pill" href="{% url 'profile' %}">Profile</a></li>
@@ -25,7 +21,10 @@
         <li {% block privacy_active %}{% endblock %}><a data-toggle="pill" href="{% url 'privacy' %}">Privacy</a></li>
         <li {% block social_active %}{% endblock %}><a data-toggle="pill" href="{% url 'social' %}">Social Integrations</a></li>
       </ul>
+</div>
 
+<div class="page-container">
+    <div class="container">
       {% block myprofile_tab %}{% endblock %}
   </div><!--/.container-->
 </div><!--/.page-container-->
